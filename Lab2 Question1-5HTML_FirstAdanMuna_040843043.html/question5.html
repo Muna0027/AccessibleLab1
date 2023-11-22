@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Question 5 - WAI-ARIA</title>
+   <style>
+      body {
+         padding-left: 40px;
+
+      }
+
+      div>div {
+         padding-left: 20px;
+         position: relative;
+      }
+
+      div>div::before {
+         content: " ";
+         width: 8px;
+         height: 8px;
+         background-color: black;
+         border-radius: 50%;
+         position: absolute;
+         left: 0;
+         top: 8px;
+      }
+
+      .h1 {
+         font-size: 2rem;
+      }
+   </style>
+</head>
+
+<body>
+   <h2>1. Heading 1</h2>
+   <p role="heading" aria-level="1" class="h1">WAI-ARIA Exercise</p>
+   <h2>2. List</h2>
+   <p>My favorite animals:</p>
+   <div role="list">
+      <div role="listitem">Gazelle</div>
+      <div role="listitem">Llama</div>
+      <div role="listitem" >Majestic moose</div>
+      <div role="listitem">Hedgehog</div>
+   </div>
+   <h2>3. Form</h2>
+   <div role="form" aria-label="The company database">
+      <input type="text" aria-label="Search employee" name="filter">
+   </div>
+   <h2>4. Links</h2>
+   <div>
+      <h3 id="o1">Outdoors</h3>
+         <p>Doing outdoor activities is fun for everyone. These are recommended activities for all the members of the
+            family.</p>
+         <p>In Gatineau Park, there are a few trails dedicated for users with disabilities. The trails feature finished
+            roads suitable for wheelchairs.</p>
+         <h3 id="c1">Childern</h3>
+         <p>Children who are 3 years and above would love to experience getting inside the Lusk cave. <a
+               href="kids.html" id="a1" aria-labelledby="a1 c1 o1">Learn more</a></p>
+   </div>
+
+</html>
